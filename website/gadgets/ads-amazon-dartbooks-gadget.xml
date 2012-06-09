@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Dart Books Ads" 
+  	author="Brandon Donnelson" 
+  	author_email="branflake2267@gmail.com" 
+  	title_url="http://c.dart-examples.com"
+  	description="Display the Dart Amazon books. "/>
+  <Content type="html">
+    <![CDATA[
+       <div align="center">
+		    
+		    <iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=foreclo07-20&o=1&p=8&l=as1&m=amazon&f=ifr&ref=tf_til&asins=B007K0T824" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+			
+	  </div>
+    ]]>
+  </Content>
+</Module>

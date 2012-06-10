@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Facebook Liker" 
+  <ModulePrefs title="Dart Books Ads" 
   	author="Brandon Donnelson" 
   	author_email="branflake2267@gmail.com" 
   	title_url="http://c.dart-examples.com"
-  	description="Facebook Liker"/>
+  	description="Display the Dart Amazon books. "/>
   <Content type="html">
     <![CDATA[
        <div align="center">
-        <div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=360471930632325";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
+        <!-- Amazon Dart In Action Book Link -->
+		<iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=foreclo07-20&o=1&p=8&l=as1&m=amazon&f=ifr&ref=tf_til&asins=B007K0T824" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 	  </div>
     ]]>
   </Content>
+</Module>
 </Module>

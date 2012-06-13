@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Twitter Tweeter" 
+  	author="Brandon Donnelson" 
+  	author_email="branflake2267@gmail.com" 
+  	title_url="http://c.dart-examples.com"
+  	description="Twitter Tweeter"/>
+  <Content type="html">
+    <![CDATA[
+		
+		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+		new TWTR.Widget({
+		  version: 2,
+		  type: 'search',
+		  search: '#dartlang',
+		  interval: 30000,
+		  title: 'Dart Feed',
+		  subject: '#dartlang',
+		  width: 'auto',
+		  height: 350,
+		  theme: {
+		    shell: {
+		      background: '#8ec1da',
+		      color: '#ffffff'
+		    },
+		    tweets: {
+		      background: '#ffffff',
+		      color: '#444444',
+		      links: '#1985b5'
+		    }
+		  },
+		  features: {
+		    scrollbar: true,
+		    loop: true,
+		    live: true,
+		    behavior: 'default'
+		  }
+		}).render().start();
+		</script>
+		
+    ]]>
+  </Content>
+</Module>

@@ -13,7 +13,7 @@
 		new TWTR.Widget({
 		  version: 2,
 		  type: 'search',
-		  search: '#dartlang',
+		  search: '#dartlang OR @dart_lang',
 		  interval: 30000,
 		  title: 'Dart Feed',
 		  subject: '#dartlang',

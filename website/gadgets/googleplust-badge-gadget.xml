@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Dart Google+ Badget" 
+  	author="Brandon Donnelson" 
+  	author_email="branflake2267@gmail.com" 
+  	title_url="http://c.dart-examples.com"
+  	description="Dart Google+ Page"/>
+  <Content type="html">
+    <![CDATA[
+		
+		<script type="text/javascript">
+		window.___gcfg = {lang: 'en'};
+		(function() 
+		{var po = document.createElement("script");
+		po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(po, s);
+		})();</script>
+		
+		<!-- Place this tag where you want the badge to render -->
+		<g:plus href="https://plus.google.com/109866369054280216564" rel="publisher" width="300" height="131" theme="light"></g:plus>
+		
+    ]]>
+  </Content>
+</Module>

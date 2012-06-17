@@ -18,15 +18,20 @@
           }
           String url = http + '://gist.github.com/' + prefs.getString('gistId') + '.js';
 
-		  function getGist() {    
+		  function getGist() {  
+		    alert("1");  
 		    var params = {};  
 		    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
 		    gadgets.io.makeRequest(url, response, params);
+		    alert("2");
 		  };
 		  
-		  function response(obj) {  
+		  function response(obj) {
+		  alert("3");  
 		    var str = obj.text;
+		    alert(str);
 		    document.write(str);
+		    alert("5");
 		  };
 		  gadgets.util.registerOnLoadHandler(getHtml);
          

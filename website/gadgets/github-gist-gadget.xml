@@ -10,11 +10,16 @@
   <Content type="html">
     <![CDATA[
       <div align="center">
-        var http = "http";
-        if (prefs.getBool("https")) {
-          http = "https";
-        }
-        <script src=http + "://gist.github.com/" + prefs.getString("gistId") + ".js"/>
+        <script type="text/javascript">
+          var http = "http";
+          if (prefs.getBool("https")) {
+            http = "https";
+          }
+          var script = document.createElement('SCRIPT');
+          script.type = 'text/javascript';
+          script.src = http + '://gist.github.com/' + prefs.getString('gistId') + '.js';
+          document.appendChild(script);
+        <script>
 	  </div>
     ]]>
   </Content>

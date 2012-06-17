@@ -2,6 +2,7 @@
 #Prerequisites: http://code.google.com/p/dart/wiki/PreparingYourMachine 
 
 # TODO: http://code.google.com/p/dart/wiki/PreparingYourMachine automate more?
+# TODO: check for git & svn
 
 # read the project properties - saved varaibles about your workspace
 . DartProject.properties

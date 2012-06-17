@@ -10,9 +10,11 @@
 	<script type="text/javascript">
  
         var http = "http";
-        if (prefs.getBool("https")) { 
-          http = "https";
-        }
+        try {
+          if (prefs.getBool("https")) { 
+            http = "https";
+          }
+        } catch(e) {}
  
         var gistId = prefs.getString("gistid");
         var eid = "gist-" + gistId;

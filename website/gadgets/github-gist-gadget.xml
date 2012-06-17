@@ -9,6 +9,8 @@
 
 	<script type="text/javascript">
  
+        var prefs = new gadgets.Prefs();
+ 
         var http = "http";
         if (prefs.getBool("https")) { 
           http = "https";

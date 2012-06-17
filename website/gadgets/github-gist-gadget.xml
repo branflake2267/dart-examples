@@ -33,7 +33,7 @@
 		function response(obj) {  
 		  var s = obj.text.toString();
     //alert(s);
-          s = s.replace(/(<a)/g, "<a target=\\\"_blank\\\"");
+          s = s.replace(/(<a)/g, "<a target=\\\\"_blank\\\\"");
     alert(s);
           eval(s);
 		};

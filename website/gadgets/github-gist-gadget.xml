@@ -10,18 +10,11 @@
 	<script type="text/javascript">
  
         var http = "http";
-        try {
-          if (prefs.getBool("https")) { 
-            http = "https";
-          }
-        } catch(e) {}
+        if (prefs.getBool("https")) { 
+          http = "https";
+        }
  
-   
-        var gistId = 2945019;
-        try {
-          gistId = prefs.getString("gistid");
-        } catch(e) {}
-        
+        var gistId = prefs.getString("gistid");
         var eid = "gist-" + gistId;
  
         var e = document.createElement("div"); 
@@ -37,13 +30,8 @@
   
 		function response(obj) {  
 		  var str = obj.text;
-          eval(addTarget(s));
+          eval(str.toString());
 		};
-  
-        function addTarget(s) {
-          s = s.replace(/<a/g, "<a target='_blank' ");
-          return s;
-        }
   
 		gadgets.util.registerOnLoadHandler(getGist);
 	         

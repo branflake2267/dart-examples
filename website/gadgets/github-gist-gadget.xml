@@ -32,7 +32,9 @@
   
 		function response(obj) {  
 		  var s = obj.text.toString();
-          s = s.replace(/<a/g, "<a target='_blank'");
+    alert(s);
+          s = s.replace(/(<a)/g, "<a target='_blank'");
+    alert(s);
           eval(s);
 		};
   

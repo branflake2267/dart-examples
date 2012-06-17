@@ -7,7 +7,7 @@
  <Content type="html">
     <![CDATA[
 
-	<script type="text/javascript">
+    <script type="text/javascript">
  
         var prefs = new gadgets.Prefs();
  
@@ -22,24 +22,24 @@
         var e = document.createElement("div"); 
         e.setAttribute("eid", eid); 
         document.body.appendChild(e);
-	         
-		function getGist() {      
-		  var params = {};  
-		  params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
-		  var url = "https://gist.github.com/" + gistId + ".js";  
-		  gadgets.io.makeRequest(url, response, params);
-		};
-  
-		function response(obj) {  
-		  var s = obj.text.toString();
+              
+        function getGist() {      
+          var params = {};  
+          params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+          var url = "https://gist.github.com/" + gistId + ".js";  
+          gadgets.io.makeRequest(url, response, params);
+        };
+        
+        function response(obj) {  
+        var s = obj.text.toString();
           s = s.replace(/(<a)/g, "<a target=\"_blank\"");
           eval(s);
-		};
+        };
   
-		gadgets.util.registerOnLoadHandler(getGist);
-	         
-	</script>
-	  
+        gadgets.util.registerOnLoadHandler(getGist);
+
+    </script>
+
     ]]>
  </Content>
 </Module>

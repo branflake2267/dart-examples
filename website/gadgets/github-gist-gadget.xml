@@ -13,14 +13,8 @@
         <script type="text/javascript">
           
 		  function getGist() {
-		    var http = "http";
-            if (prefs.getBool("https")) {
-              http = "https";
-            }
-		  	
-		  	String url = http + '://gist.github.com/' + prefs.getString('gistId') + '.js';  
-		    
-		    alert("1");  
+		  	alert("1"); 
+		  	String url = "http://gist.github.com/2945019.js";  
 		    var params = {};  
 		    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
 		    gadgets.io.makeRequest(url, response, params);

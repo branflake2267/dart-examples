@@ -6,14 +6,10 @@
   	title_url="http://c.dart-examples.com"
   	description="Display your Github gist."/>
   	<UserPref name="gistId" display_name="GistId" default_value=""/>
-  	<UserPref name="https" display_name="HTTPS" datatype="bool" default_value="false"/>
   <Content type="html">
     <![CDATA[
       <div align="center">
-        var http = "http";
-        if (prefs.getBool("https")) {
-          http = "https";
-        }
+        var http = window.parent.location.protocol;
         <script src=http + "://gist.github.com/" + prefs.getString("gistId") + ".js"/>
 	  </div>
     ]]>

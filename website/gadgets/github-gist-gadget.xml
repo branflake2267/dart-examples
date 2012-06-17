@@ -14,7 +14,7 @@
           http = "https";
         }
  
-        var gistId = prefs.getString('gistId');
+        var gistId = "2945019"; //prefs.getString('gistId');
         var eid = "gist-" + gistId;
  
         var e = document.createElement('div'); 

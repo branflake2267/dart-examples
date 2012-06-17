@@ -31,9 +31,9 @@
 		};
   
 		function response(obj) {  
-		  var s = obj.text;
+		  var s = obj.text.toString();
           s = s.replace(/<a/g, "<a target='_blank'");
-          eval(s.toString());
+          eval(s);
 		};
   
 		gadgets.util.registerOnLoadHandler(getGist);

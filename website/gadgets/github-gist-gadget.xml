@@ -9,29 +9,25 @@
   	<UserPref name="https" display_name="HTTPS" datatype="bool" default_value="false"/>
   <Content type="html">
     <![CDATA[
-      <div align="center">
-        <script type="text/javascript">
-          
-		  function getGist() {
-		  	alert("1"); 
-		  	String url = "http://gist.github.com/2945019.js";  
-		    var params = {};  
-		    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
-		    gadgets.io.makeRequest(url, response, params);
-		    alert("2");
-		  };
-		  
-		  function response(obj) {
-		  alert("3");  
-		    var str = obj.text;
-		    alert(str);
-		    document.write(str);
-		    alert("5");
-		  };
-		  gadgets.util.registerOnLoadHandler(getGist);
+      
+<script type="text/javascript">
          
-        </script>
-	  </div>
+function getHtml() {    
+  var params = {};  
+  params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+  var url = "http://gist.github.com/2945019.js";  
+  gadgets.io.makeRequest(url, response, params);
+};
+function response(obj) {  
+  //obj.text contains the text of the page that was requested  
+  var str = obj.text;
+  var html =  str.substr(0,400);  
+  document.getElementById('content_div').innerHTML = html;
+};
+gadgets.util.registerOnLoadHandler(getHtml);
+         
+</script>
+	  
     ]]>
   </Content>
 </Module>

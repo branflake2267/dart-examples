@@ -30,8 +30,13 @@
   
 		function response(obj) {  
 		  var str = obj.text;
-          eval(str.toString());
+          eval(addTarget(s));
 		};
+  
+        function addTarget(s) {
+          s = s.replace(/<a/g, "<a target='_blank' ");
+          return s;
+        }
   
 		gadgets.util.registerOnLoadHandler(getGist);
 	         

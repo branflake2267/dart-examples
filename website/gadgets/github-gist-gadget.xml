@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="GitHub Gist Viewer" 
-  	author="Brandon Donnelson" 
-  	author_email="branflake2267@gmail.com" 
-  	title_url="http://c.dart-examples.com"
-  	description="Display your Github gist."/>
-  	<UserPref name="gistId" display_name="Gist Id" default_value=""/>
-  	<UserPref name="https" display_name="HTTPS" datatype="bool" default_value="false"/>
-  <Content type="html">
+ <ModulePrefs title="GitHub Gist Viewer" author="Brandon Donnelson" author_email="branflake2267@gmail.com"
+  title_url="http://c.dart-examples.com" description="Display your Github gist." />
+ <UserPref name="gistId" display_name="Gist Id" default_value="" />
+ <UserPref name="https" display_name="HTTPS" datatype="bool" default_value="false" />
+ <Content type="html">
     <![CDATA[
       
-<script type="text/javascript">
-         
-function getHtml() {    
-  var params = {};  
-  params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
-  var url = "http://gist.github.com/2945019.js";  
-  gadgets.io.makeRequest(url, response, params);
-};
-function response(obj) {  
-  //obj.text contains the text of the page that was requested  
-  var str = obj.text;
-  var html =  str.substr(0,400);  
-  document.body.innerHTML = html;
-};
-gadgets.util.registerOnLoadHandler(getHtml);
-         
-</script>
+	<script type="text/javascript">
+	         
+		function getGist() {
+          var http = "http";
+          if (prefs.getBool("https")) {
+            http = "https";
+          }
+      
+          var gistId = prefs.getString('gistId');
+      
+		  var params = {};  
+		  params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+		  var url = http + "://gist.github.com/" + gistId + ".js";  
+		  gadgets.io.makeRequest(url, response, params);
+		};
+  
+		function response(obj) {  
+		  //obj.text contains the text of the page that was requested  
+		  var str = obj.text;
+		  var html =  str.substr(0,400);  
+		  document.body.innerHTML = html;
+		};
+  
+		gadgets.util.registerOnLoadHandler(getGist);
+	         
+	</script>
 	  
     ]]>
-  </Content>
+ </Content>
 </Module>

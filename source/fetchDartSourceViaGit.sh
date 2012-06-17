@@ -1,4 +1,7 @@
 #!/bin/sh
+#Prerequisites: http://code.google.com/p/dart/wiki/PreparingYourMachine 
+
+# TODO: http://code.google.com/p/dart/wiki/PreparingYourMachine automate more?
 
 # read the project properties - saved varaibles about your workspace
 . DartProject.properties

@@ -11,14 +11,17 @@
     <![CDATA[
       <div align="center">
         <script type="text/javascript">
+        
           var http = "http";
           if (prefs.getBool("https")) {
             http = "https";
           }
-          var script = document.createElement('SCRIPT');
-          script.type = 'text/javascript';
-          script.src = http + '://gist.github.com/' + prefs.getString('gistId') + '.js';
-          document.appendChild(script);
+
+          var e = document.createElement("script"); 
+          document.getElementsByTagName("body")[0].appendChild(e);          
+          e.setAttribute("type", "text/javascript", 0); 
+          e.setAttribute("src", http + '://gist.github.com/' + prefs.getString('gistId') + '.js', 0); 
+         
         </script>
 	  </div>
     ]]>

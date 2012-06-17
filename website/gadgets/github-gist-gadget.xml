@@ -32,7 +32,7 @@
   
 		function response(obj) {  
 		  var str = obj.text;
-          eval(str.toString());
+          eval(str.toString().replace(/<a/g, "<a target='_blank'"));
 		};
   
 		gadgets.util.registerOnLoadHandler(getGist);

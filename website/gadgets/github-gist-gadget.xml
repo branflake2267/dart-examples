@@ -2,7 +2,7 @@
 <Module>
  <ModulePrefs title="GitHub Gist Viewer" author="Brandon Donnelson" author_email="branflake2267@gmail.com"
   title_url="http://c.dart-examples.com" description="Display your Github gist." />
- <UserPref name="gistId" display_name="Gist Id" default_value="" />
+ <UserPref name="gistId" display_name="Gist Id" default_value="2945019" />
  <UserPref name="https" display_name="HTTPS" datatype="bool" default_value="false" />
  <Content type="html">
     <![CDATA[

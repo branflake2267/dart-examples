@@ -9,6 +9,11 @@
 
 	<script type="text/javascript">
  
+        var http = "http";
+        if (prefs.getBool("https")) {
+          http = "https";
+        }
+ 
         var gistId = prefs.getString('gistId');
         var eid = "gist-" + gistId;
  
@@ -16,12 +21,7 @@
         e.setAttribute('eid', eid); 
         document.body.appendChild(e);
 	         
-		function getGist() {
-          var http = "http";
-          if (prefs.getBool("https")) {
-            http = "https";
-          }
-      
+		function getGist() {      
 		  var params = {};  
 		  params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
 		  var url = "https://gist.github.com/" + gistId + ".js";  

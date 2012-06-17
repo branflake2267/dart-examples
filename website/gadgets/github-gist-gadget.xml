@@ -16,7 +16,12 @@
           }
         } catch(e) {}
  
-        var gistId = prefs.getString("gistid");
+   
+        var gistId = 2945019;
+        try {
+          gistId = prefs.getString("gistid");
+        } catch(e) {}
+        
         var eid = "gist-" + gistId;
  
         var e = document.createElement("div"); 

@@ -26,8 +26,8 @@
 		function response(obj) {  
 		  //obj.text contains the text of the page that was requested  
 		  var str = obj.text;
-		  var html =  str.substr(0, 1000);  
-		  document.body.innerHTML = html;
+		  //var html =  str.substr(0, 1000);  
+		  document.body.innerHTML = str.toString();
 		};
   
 		gadgets.util.registerOnLoadHandler(getGist);

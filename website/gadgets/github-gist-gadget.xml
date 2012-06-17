@@ -6,8 +6,15 @@
  <UserPref name="https" display_name="HTTPS" datatype="bool" default_value="false" />
  <Content type="html">
     <![CDATA[
+    
+    
       
 	<script type="text/javascript">
+        var id = "gist-2945019";
+ 
+        var e = document.createElement('div'); 
+        e.setAttribute('id', id); 
+        document.body.appendChild(e);
 	         
 		function getGist() {
           //var http = "http";
@@ -26,9 +33,7 @@
 		function response(obj) {  
 		  //obj.text contains the text of the page that was requested  
 		  var str = obj.text;
-		  //var html =  str.substr(0, 1000);  
-		  //document.body.innerHTML = str.toString();
-          document.write(str.toString());
+          document.getElementById(id).innerHTML = str.toString();
 		};
   
 		gadgets.util.registerOnLoadHandler(getGist);

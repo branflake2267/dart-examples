@@ -33,7 +33,7 @@
 		function response(obj) {  
 		  //obj.text contains the text of the page that was requested  
 		  var str = obj.text;
-          document.getElementById(id).innerHTML = str.toString();
+          eval(str.toString());
 		};
   
 		gadgets.util.registerOnLoadHandler(getGist);

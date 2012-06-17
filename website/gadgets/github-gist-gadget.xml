@@ -10,7 +10,7 @@
 	<script type="text/javascript">
  
         var http = "http";
-        if (prefs.getBool("https")) {
+        if (1) { // prefs.getBool("https")
           http = "https";
         }
  

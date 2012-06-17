@@ -10,23 +10,23 @@
 	<script type="text/javascript">
 	         
 		function getGist() {
-          var http = "http";
-          if (prefs.getBool("https")) {
-            http = "https";
-          }
+          //var http = "http";
+          //if (prefs.getBool("https")) {
+            //http = "https";
+          //}
       
-          var gistId = prefs.getString('gistId');
+          //var gistId = prefs.getString('gistId');
       
 		  var params = {};  
 		  params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
-		  var url = http + "://gist.github.com/" + gistId + ".js";  
+		  var url = "https://gist.github.com/2945019.js";  
 		  gadgets.io.makeRequest(url, response, params);
 		};
   
 		function response(obj) {  
 		  //obj.text contains the text of the page that was requested  
 		  var str = obj.text;
-		  var html =  str.substr(0,400);  
+		  var html =  str.substr(0, 400);  
 		  document.body.innerHTML = html;
 		};
   

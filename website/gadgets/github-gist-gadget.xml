@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Github Gist Viewer" 
+  	author="Brandon Donnelson" 
+  	author_email="branflake2267@gmail.com" 
+  	title_url="http://c.dart-examples.com"
+  	description="Display your Github gist."/>
+  	<UserPref name="gistId" display_name="GistId" default_value=""/>
+  <Content type="html">
+    <![CDATA[
+      <div align="center">
+        <script src="https://gist.github.com/" + prefs.getString("gistId") + ".js"> </script>
+	  </div>
+    ]]>
+  </Content>
+</Module>

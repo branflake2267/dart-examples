@@ -19,7 +19,7 @@
           script.type = 'text/javascript';
           script.src = http + '://gist.github.com/' + prefs.getString('gistId') + '.js';
           document.appendChild(script);
-        <script>
+        </script>
 	  </div>
     ]]>
   </Content>

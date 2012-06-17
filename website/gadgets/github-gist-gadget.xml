@@ -11,14 +11,15 @@
     <![CDATA[
       <div align="center">
         <script type="text/javascript">
-        
-          var http = "http";
-          if (prefs.getBool("https")) {
-            http = "https";
-          }
-          String url = http + '://gist.github.com/' + prefs.getString('gistId') + '.js';
-
-		  function getGist() {  
+          
+		  function getGist() {
+		    var http = "http";
+            if (prefs.getBool("https")) {
+              http = "https";
+            }
+		  	
+		  	String url = http + '://gist.github.com/' + prefs.getString('gistId') + '.js';  
+		    
 		    alert("1");  
 		    var params = {};  
 		    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
@@ -33,9 +34,7 @@
 		    document.write(str);
 		    alert("5");
 		  };
-		  gadgets.util.registerOnLoadHandler(getHtml);
-         
-          getGist();
+		  gadgets.util.registerOnLoadHandler(getGist);
          
         </script>
 	  </div>

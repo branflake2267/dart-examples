@@ -40,3 +40,5 @@ gclient config https://dart.googlecode.com/svn/branches/bleeding_edge/deps/all.d
 git svn clone -rHEAD https://dart.googlecode.com/svn/branches/bleeding_edge/dart dart
 gclient sync
 gclient runhooks
+
+echo "Finished downloading and compiling dart source"

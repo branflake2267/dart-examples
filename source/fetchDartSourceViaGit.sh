@@ -37,6 +37,7 @@ if [ ! -d $WORKING_DIRECTORY/dart-repo ]; then
    mkdir dart-repo 
 fi
 
+
 cd dart-repo
 
 
@@ -45,5 +46,17 @@ gclient config https://dart.googlecode.com/svn/branches/bleeding_edge/deps/all.d
 git svn clone -rHEAD https://dart.googlecode.com/svn/branches/bleeding_edge/dart dart
 gclient sync
 gclient runhooks
+
+
+cd dart
+
+
+# run with sudo
+sudo mkdir -p /usr/local/dart-out/
+ln -s -f /usr/local/dart-out/ out
+
+# compile dart
+./tools/build.py --arch=ia32
+
 
 echo "Finished downloading and compiling dart source"

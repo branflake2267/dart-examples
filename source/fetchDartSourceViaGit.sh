@@ -1,5 +1,6 @@
 #!/bin/sh
-#Prerequisites: http://code.google.com/p/dart/wiki/PreparingYourMachine 
+# http://code.google.com/p/dart/wiki/Building
+# Prerequisites: http://code.google.com/p/dart/wiki/PreparingYourMachine 
 
 # TODO: http://code.google.com/p/dart/wiki/PreparingYourMachine automate more?
 # TODO: check for git & svn
@@ -13,9 +14,9 @@ if [ ! -d $WORKING_DIRECTORY ]; then
     mkdir $WORKING_DIRECTORY
 fi
 
+
 # change to the working directory to perform the operations
 cd $WORKING_DIRECTORY
-
 
 
 # Check to see if the depot_tools are in the path
@@ -27,18 +28,16 @@ fi
 # Check to see if gclient exists and if not fetch the tools
 if ! command -v gclient &>/dev/null
 then
-        git clone https://git.chromium.org/chromium/tools/depot_tools.git
-        #put the tools in the enviroment path. Stick this in .bashrc for a long term solution
-        export PATH="$PATH":`pwd`/depot_tools
+    git clone https://git.chromium.org/chromium/tools/depot_tools.git
+    #put the tools in the enviroment path. Stick this in .bashrc for a long term solution
+    export PATH="$PATH":`pwd`/depot_tools
 fi
 
 # Create a working directory
-if [ ! -d $WORKING_DIRECTORY/dart-repo ]; then
+if [ ! -d $WORKING_DIRECTORY/dart-source ]; then
    mkdir dart-repo 
 fi
-
-
-cd dart-repo
+cd dart-source
 
 
 # fetch the dart source via git
@@ -52,6 +51,7 @@ cd dart
 
 
 # run with sudo
+echo "sudo mkdir -p /usr/local/dart-out/ - whats your admin password?"
 sudo mkdir -p /usr/local/dart-out/
 ln -s -f /usr/local/dart-out/ out
 

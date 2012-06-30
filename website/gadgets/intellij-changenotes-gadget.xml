@@ -8,7 +8,7 @@
     <script type="text/javascript">
 
         function clean() {
-          alert('cleaning?');
+          alert('cleaning? v1');
           var e = document.querySelectorAll(".change_notes");
           var html = e[0].innerHTML;
           alert(html);

@@ -10,11 +10,15 @@
         var url = "http://plugins.intellij.net/plugin/index?pr=idea&pluginId=6351";
         window.location.href = url;
 
-        var e = document.querySelectorAll(".change_notes");
-        for (var i = 0; i < e.length; i++) {
-           document.write(e[i].innerHTML);
+        function clean() {
+          var e = document.querySelectorAll(".change_notes");
+          for (var i = 0; i < e.length; i++) {
+            alsert(e[i].innerHTML);
+            document.write(e[i].innerHTML);
+          }
         }
-
+        window.onload = clean();
+        
     </script>
 
     ]]>

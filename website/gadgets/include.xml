@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+ <ModulePrefs title="Include Page" author="Brandon Donnelson" author_email="branflake2267@gmail.com"
+  title_url="http://c.appengine-examples.com" description="Include Page" />
+ <UserPref name="url" display_name="URL" default_value=""/>
+ <Content type="html">
+    <![CDATA[
+
+    <script type="text/javascript">
+ 
+        var prefs = new gadgets.Prefs();
+        var url = prefs.getString("url");
+        window.location.href = url;
+
+    </script>
+
+    ]]>
+ </Content>
+</Module>

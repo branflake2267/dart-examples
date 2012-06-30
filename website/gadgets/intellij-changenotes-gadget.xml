@@ -25,7 +25,7 @@
         function response(obj) {  
           var str = obj.text;
           var html =  str.toString(); 
-          document.write(html);
+          document.write(str);
           clean();
         };
         

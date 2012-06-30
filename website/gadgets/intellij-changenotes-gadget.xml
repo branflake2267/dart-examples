@@ -8,6 +8,7 @@
     <script type="text/javascript">
 
         function clean() {
+          alert('cleaning?');
           var e = document.querySelectorAll(".change_notes");
           for (var i = 0; i < e.length; i++) {
             alert(e[i].innerHTML);

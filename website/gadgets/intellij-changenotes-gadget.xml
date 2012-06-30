@@ -15,7 +15,7 @@
           
           var s = e[0].innerHTML.toString();
           try { 
-           document.write(s);
+            document.body.innerHTML = s;
           } catch (e) {}
           
           alert("html=" + s);
@@ -32,7 +32,7 @@
           var s = obj.text.toString();
           
           try { 
-           document.write(s);
+           document.body.innerHTML = s;
           } catch (e) {}
           
           clean();

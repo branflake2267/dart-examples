@@ -12,7 +12,7 @@
           var e = document.querySelectorAll(".change_notes");
           var html = e[0].innerHTML;
           alert(html);
-          document.write(html);
+          document.write(html.toString());
         }
        
         function getHtml() {    

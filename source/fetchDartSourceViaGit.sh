@@ -35,7 +35,7 @@ fi
 
 # Create a working directory
 if [ ! -d $WORKING_DIRECTORY/dart-source ]; then
-   mkdir dart-repo 
+   mkdir dart-source 
 fi
 cd dart-source
 

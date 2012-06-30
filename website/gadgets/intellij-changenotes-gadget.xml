@@ -7,13 +7,16 @@
 
     <script type="text/javascript">
 
+        var idiv = document.createElement("div"); 
+        document.body.appendChild(idiv);
+
         function clean() {
           alert('cleaning?');
           var e = document.querySelectorAll(".change_notes");
           for (var i = 0; i < e.length; i++) {
           var html = e[i].innerHTML
             alert(html);
-            document.write(html);
+            idiv.write(html);
             break;
           }
         }
@@ -28,7 +31,7 @@
         function response(obj) {  
           var str = obj.text;
           var html =  str.toString(); 
-          document.write(html);
+          idiv.write(html);
           clean();
         };
         

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+ <ModulePrefs title="Include IntelliJ Change List" author="Brandon Donnelson" author_email="branflake2267@gmail.com"
+  title_url="http://c.appengine-examples.com" description="Inlude IntelliJ Change List" />
+ <Content type="html">
+    <![CDATA[
+
+    <script type="text/javascript">
+ 
+        var url = "http://plugins.intellij.net/plugin/index?pr=idea&pluginId=6351";
+        window.location.href = url;
+
+        var e = document.querySelectorAll(".change_notes");
+        for (var i = 0; i < e.length; i++) {
+           document.write(e[i].innerHTML);
+        }
+
+    </script>
+
+    ]]>
+ </Content>
+</Module>

@@ -13,7 +13,7 @@
         function clean() {
           var e = document.querySelectorAll(".change_notes");
           for (var i = 0; i < e.length; i++) {
-            alsert(e[i].innerHTML);
+            alert(e[i].innerHTML);
             document.write(e[i].innerHTML);
           }
         }

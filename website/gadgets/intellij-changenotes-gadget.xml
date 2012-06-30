@@ -13,7 +13,7 @@
           for (var i = 0; i < e.length; i++) {
           var html = e[i].innerHTML
             alert(html);
-            idiv.write(html);
+            idiv.innerHTML = html;
             break;
           }
         }
@@ -28,7 +28,7 @@
         function response(obj, idiv) {  
           var str = obj.text;
           var html =  str.toString(); 
-          idiv.write(html);
+          idiv.innerHTML = html;
           clean(idiv);
         };
         

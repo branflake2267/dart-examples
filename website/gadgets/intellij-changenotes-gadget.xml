@@ -8,9 +8,6 @@
     <script type="text/javascript">
 
         function clean() {
-        
-          alert('cleaning? v4');
-          
           var e = document.querySelectorAll(".change_notes");
           
           var s = e[0].innerHTML.toString();
@@ -18,7 +15,6 @@
             document.body.innerHTML = s;
           } catch (e) {}
           
-          alert("html=" + s);
         }
        
         function getHtml() {    

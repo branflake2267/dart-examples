@@ -7,10 +7,7 @@
 
     <script type="text/javascript">
 
-        var idiv = document.createElement("div"); 
-        document.body.appendChild(idiv);
-
-        function clean() {
+        function clean(idiv) {
           alert('cleaning?');
           var e = document.querySelectorAll(".change_notes");
           for (var i = 0; i < e.length; i++) {
@@ -28,14 +25,17 @@
           gadgets.io.makeRequest(url, response, params);
         };
         
-        function response(obj) {  
+        function response(obj, idiv) {  
           var str = obj.text;
           var html =  str.toString(); 
           idiv.write(html);
-          clean();
+          clean(idiv);
         };
         
-        gadgets.util.registerOnLoadHandler(getHtml);
+        var idiv = document.createElement("div"); 
+        document.body.appendChild(idiv);
+        
+        gadgets.util.registerOnLoadHandler(getHtml, idiv);
         
         
     </script>

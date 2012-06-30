@@ -6,14 +6,32 @@
     <![CDATA[
 
     <script type="text/javascript">
- 
-        var url = "http://plugins.intellij.net/plugin/index?pr=idea&pluginId=6351";
-        window.location.href = url;
 
         function clean() {
-          alert("test");
+          alert('cleaning?');
+          var e = document.querySelectorAll(".change_notes");
+          for (var i = 0; i < e.length; i++) {
+            alert(e[i].innerHTML);
+            document.write(e[i].innerHTML);
+          }
         }
-        gadgets.util.registerOnLoadHandler(clean);
+       
+        function getHtml() {    
+          var params = {};  
+          params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;
+          var url = "http://plugins.intellij.net/plugin/index?pr=idea&pluginId=6351";  
+          gadgets.io.makeRequest(url, response, params);
+        };
+        
+        function response(obj) {  
+          var str = obj.text;
+          var html =  str.toString(); 
+          document.write(html);
+          clean();
+        };
+        
+        gadgets.util.registerOnLoadHandler(getHtml);
+        
         
     </script>
 

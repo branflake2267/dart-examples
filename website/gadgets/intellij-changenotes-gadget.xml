@@ -7,15 +7,12 @@
 
     <script type="text/javascript">
 
-        function clean(idiv) {
+        function clean() {
           alert('cleaning?');
           var e = document.querySelectorAll(".change_notes");
-          for (var i = 0; i < e.length; i++) {
-          var html = e[i].innerHTML
-            alert(html);
-            idiv.innerHTML = html;
-            break;
-          }
+          var html = e[0].innerHTML;
+          alert(html);
+          document.write(html);
         }
        
         function getHtml() {    
@@ -25,17 +22,14 @@
           gadgets.io.makeRequest(url, response, params);
         };
         
-        function response(obj, idiv) {  
+        function response(obj) {  
           var str = obj.text;
           var html =  str.toString(); 
-          idiv.innerHTML = html;
-          clean(idiv);
+          document.write(html);
+          clean();
         };
         
-        var idiv = document.createElement("div"); 
-        document.body.appendChild(idiv);
-        
-        gadgets.util.registerOnLoadHandler(getHtml, idiv);
+        gadgets.util.registerOnLoadHandler(getHtml);
         
         
     </script>

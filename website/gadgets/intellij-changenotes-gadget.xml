@@ -6,9 +6,6 @@
     <![CDATA[
 
     <script type="text/javascript">
- 
-        var url = "http://plugins.intellij.net/plugin/index?pr=idea&pluginId=6351";
-        window.location.href = url;
 
         function clean() {
           var e = document.querySelectorAll(".change_notes");
@@ -17,7 +14,12 @@
             document.write(e[i].innerHTML);
           }
         }
-        window.onload = clean();
+        window.onload = clean;
+ 
+        var url = "http://plugins.intellij.net/plugin/index?pr=idea&pluginId=6351";
+        window.location.href = url;
+
+
         
     </script>
 

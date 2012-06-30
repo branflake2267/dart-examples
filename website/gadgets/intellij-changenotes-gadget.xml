@@ -24,8 +24,10 @@
         
         function response(obj) {  
           var str = obj.text;
-          var html =  str.toString(); 
-          document.write(str);
+          var html =  str.toString();
+          try{ 
+           document.write(str);
+          } catch (e) {}
           clean();
         };
         

@@ -12,9 +12,7 @@ class ImageScaler {
   
   void observeFileInput() {
     InputElement fileElement = query("#file");
-    fileElement.on.change.add((Event e) {
-      processFiles(fileElement.files);
-    }, true);
+    fileElement.on.change.add((e) => processFiles(fileElement.files), true);
   }
   
   void processFiles(List<File> files) {

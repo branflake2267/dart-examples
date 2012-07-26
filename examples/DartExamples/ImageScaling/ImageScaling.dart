@@ -36,15 +36,8 @@ class ImageScaler {
   
   bool isAnImage(File file) {
     print("file.type=${file.type}");
-    
     Pattern pattern = new RegExp(@"(jpeg|png)");
-    
-    bool b = false;
-    if (file.type.toString().contains(pattern) == true) {
-      b = true;
-    }
-    
-    return b;
+    return file.type.toString().contains(pattern);
   }
   
   void readIn(File file) {

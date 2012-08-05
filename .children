@@ -2,6 +2,7 @@ examples/DartExamples/ClientServerComm/TestRequest2.dart
 examples/DartExamples/ClientServerComm/ClientServerComm.dart
 examples/DartExamples/ClientServerComm/TestRequest1.dart
 examples/DartExamples/DartLibraryExperimentation/RunLibraryExperimentalDemo.dart
+examples/DartExamples/DemoJavascriptInjection/DemoJavascriptInjection.dart
 examples/DartExamples/DartLibraryExperimentation/stringy/StringySilo.dart
 examples/DartExamples/Index.dart
 examples/DartExamples/ImageScaling/TestFileReader.dart

@@ -1,0 +1,61 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+}
+
+#app {
+  margin-left: auto;
+  margin-right: auto;
+  width: 850px;
+}
+
+#ads {
+  margin-left: auto;
+  margin-right: auto;
+  width: 728px;
+}
+
+#header {
+  margin-bottom: 10px;
+}
+
+#menu {
+  background: #E0E0E0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#sandbox {
+  border: 4px dotted #FF0000;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+}
+
+#PropertyList {
+  width: 600px;
+  float: left;
+  margin-left: 10px;
+  font-size: 90%;
+}
+
+.row {
+  padding: 2px;
+}
+
+.name {
+  display: inline-block;
+  font-weight: bold; 
+  padding-right: 10px;
+  width: 280px;
+  text-align: right;
+}
+
+.value {
+   display: inline;
+}

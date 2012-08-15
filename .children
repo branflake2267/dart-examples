@@ -1,10 +1,11 @@
 examples/DartExamples/ClientServerComm/TestRequest2.dart
+examples/DartExamples/DemoCanvasPointing/DemoCanvasPointing.dart
 examples/DartExamples/ClientServerComm/ClientServerComm.dart
 examples/DartExamples/ClientServerComm/TestRequest1.dart
-examples/DartExamples/DartLibraryExperimentation/RunLibraryExperimentalDemo.dart
 examples/DartExamples/DemoJavascriptInjection/DemoJavascriptInjection.dart
+examples/DartExamples/ImageScaling/ImageScaling.dart
+examples/DartExamples/DartLibraryExperimentation/RunLibraryExperimentalDemo.dart
 examples/DartExamples/DartLibraryExperimentation/stringy/StringySilo.dart
 examples/DartExamples/Index.dart
 examples/DartExamples/DemoMouseEvents/DemoMouseEvents.dart
 examples/DartExamples/ImageScaling/TestFileReader.dart
-examples/DartExamples/ImageScaling/ImageScaling.dart
